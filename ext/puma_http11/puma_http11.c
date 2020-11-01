@@ -52,11 +52,11 @@ static VALUE global_request_path;
 /* Defines the maximum allowed lengths for various input elements.*/
 DEF_MAX_LENGTH(FIELD_NAME, 256);
 DEF_MAX_LENGTH(FIELD_VALUE, 80 * 1024);
-DEF_MAX_LENGTH(REQUEST_URI, 1024 * 12);
+DEF_MAX_LENGTH(REQUEST_URI, 1024 * 256);
 DEF_MAX_LENGTH(FRAGMENT, 1024); /* Don't know if this length is specified somewhere or not */
 DEF_MAX_LENGTH(REQUEST_PATH, 8192);
 DEF_MAX_LENGTH(QUERY_STRING, (1024 * 256));
-DEF_MAX_LENGTH(HEADER, (1024 * (80 + 32)));
+DEF_MAX_LENGTH(HEADER, (1024 * (312)));
 
 struct common_field {
 	const size_t len;
